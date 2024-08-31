@@ -1,4 +1,4 @@
-group = "dev.thriving.oss"
+group = "org.acme"
 
 plugins {
     alias(libs.plugins.publish)
