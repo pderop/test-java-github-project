@@ -1,4 +1,4 @@
-package org.acme.fancy.lib;
+package org.acme.fancy.lib.template;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package org.acme.fancy.lib;
+package org.acme.fancy.lib.template;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,10 +29,13 @@ public class JavaLibraryTemplate {
                     : Character.toUpperCase(c);
         }
 
-        return new String(chars);
+        String s = new String(chars);
+        testCodeQL(s);
+        return s;
     }
 
-    void testCodeQL(String userInput) throws Exception {
+    static void testCodeQL(String userInput) {
+        try {
             // Establishing a connection to the database
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "password");
 
@@ -56,6 +59,8 @@ public class JavaLibraryTemplate {
             while (secureRs.next()) {
                 System.out.println("Secure User: " + secureRs.getString("username"));
             }
+        } catch (
+                Throwable e) {
+        }
     }
-
 }
